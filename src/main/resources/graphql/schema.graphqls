@@ -1,0 +1,30 @@
+type Query{
+    getAllPosts:[Post],
+    getPostById(id:ID!):Post
+    getPosts(pageNumber:Int!,pageSize: Int!):PostData
+}
+type Mutation{
+    addPost(postInput: PostInput!): Post,
+    updatePost(id:ID!,postInput: PostInput!): Post,
+    deletePost(id:ID!):Post
+}
+type Post{
+    id:ID!,
+    title: String!,
+    content: String,
+    author: String!,
+    createdAt: DateTime!,
+    updatedAt: DateTime
+}
+input PostInput{
+    title:String!,
+    content:String,
+    author: String!
+}
+type PostData{
+    posts:[Post]
+    size: Int,
+    totalElements: Int,
+    totalPages: Int,
+    number: Int
+}

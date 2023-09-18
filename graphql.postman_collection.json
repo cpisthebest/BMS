@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "b07c346e-f78a-46e2-854b-4cd0d20f4d22",
+		"name": "graphql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPosts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InEyMEpPN0FTTlhuczFMTUl6TEdkNyJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoiYm1zX21hbmFnZV91c2VyQGdtYWlsLmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LWs1Z25pM2Zja2FmZTZ5NnIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY0ZmMxM2Y0MmY2ZjJlOTQ4NjlmNDY4ZiIsImF1ZCI6WyJibXNfYXV0aDBfYXBpX2lkZW50aWZpZXIiLCJodHRwczovL2Rldi1rNWduaTNmY2thZmU2eTZyLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQzMzY5NTgsImV4cCI6MTY5NDQyMzM1OCwiYXpwIjoiM25PdzVIalRvWENmbWFqUVpNdzRJTFVOSUlwamVIMGYiLCJzY29wZSI6Im9wZW5pZCIsInBlcm1pc3Npb25zIjpbXX0.gK5nkZq1QUfr-dnFshnmXJBIC6ujucspn48QkyYlCssHX5tm7r0p2Wtmgc7eYJQ5VTyaQjwXyGfP7LHFHfycbpl43akSIVHxx124zWpT3EOj5JBcV9c82UnqureUe9BG3iiLE1InPl8rc3BAhNZ5kFJs7E1usH1Q3DzxqA_YRFSoWclaBfiev81AhoiUE0_NofqdhRhI_FQved_3a-jbnw1b43H8sQkVcWDG6PwiC-R253hlZE1jKEEGOyqRb8hvjQCnrI9H7nfiozkNPwcTe8Gyr6rmnPHIjZNjbhDLL5ioFNAhpAXQqahlyoCXmZuSnwj0gmGUXJpfkKyLm74zXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getAllPosts{\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InEyMEpPN0FTTlhuczFMTUl6TEdkNyJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoiYm1zX21hbmFnZV91c2VyQGdtYWlsLmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LWs1Z25pM2Zja2FmZTZ5NnIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY0ZmMxM2Y0MmY2ZjJlOTQ4NjlmNDY4ZiIsImF1ZCI6WyJibXNfYXV0aDBfYXBpX2lkZW50aWZpZXIiLCJodHRwczovL2Rldi1rNWduaTNmY2thZmU2eTZyLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQzMzcyODQsImV4cCI6MTY5NDQyMzY4NCwiYXpwIjoiM25PdzVIalRvWENmbWFqUVpNdzRJTFVOSUlwamVIMGYiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIiwicGVybWlzc2lvbnMiOltdfQ.GJVKtUsXkT6QV-3_uA5s6athYJwz-kcBbER3E7y4XEbP7R78_HNl9Gb5mHg1VvGwO0_4TRNC2bc4WLxXf7EUK2ra4Jf4vLLvOe1FfaGM2i4--N6OavX3nBxbREvoO77XCL8qOptq5Da3K3vQN-13KRUTZtlP5tueW_2RpHfA9g-pJDHe9EbCuS1zlbLhufO2ZW-dfJHBAiXTDUs425Xlbm8CrYDgcYg3EuNxdfE1oqxfM4gvLvH-ZTDutpZdNs7OnpmhkJ9xxesBxSIMugx0RmlnzCrhLwHMwLmxt3lZ6B46cJw1KqAX5XYGLV1AJ450D3jcr_Ajj1ah87y5Jnl-NA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addPost($postInput: PostInput!){\r\n    addPost(postInput:$postInput)\r\n    {\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": "{\r\n    \"postInput\":{\r\n        \"title\":\"22\",\r\n        \"content\":\"1\",\r\n        \"author\":\"1234567890\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InEyMEpPN0FTTlhuczFMTUl6TEdkNyJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoiYm1zX21hbmFnZV91c2VyQGdtYWlsLmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LWs1Z25pM2Zja2FmZTZ5NnIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY0ZmMxM2Y0MmY2ZjJlOTQ4NjlmNDY4ZiIsImF1ZCI6WyJibXNfYXV0aDBfYXBpX2lkZW50aWZpZXIiLCJodHRwczovL2Rldi1rNWduaTNmY2thZmU2eTZyLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQzMzY5NTgsImV4cCI6MTY5NDQyMzM1OCwiYXpwIjoiM25PdzVIalRvWENmbWFqUVpNdzRJTFVOSUlwamVIMGYiLCJzY29wZSI6Im9wZW5pZCIsInBlcm1pc3Npb25zIjpbXX0.gK5nkZq1QUfr-dnFshnmXJBIC6ujucspn48QkyYlCssHX5tm7r0p2Wtmgc7eYJQ5VTyaQjwXyGfP7LHFHfycbpl43akSIVHxx124zWpT3EOj5JBcV9c82UnqureUe9BG3iiLE1InPl8rc3BAhNZ5kFJs7E1usH1Q3DzxqA_YRFSoWclaBfiev81AhoiUE0_NofqdhRhI_FQved_3a-jbnw1b43H8sQkVcWDG6PwiC-R253hlZE1jKEEGOyqRb8hvjQCnrI9H7nfiozkNPwcTe8Gyr6rmnPHIjZNjbhDLL5ioFNAhpAXQqahlyoCXmZuSnwj0gmGUXJpfkKyLm74zXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getPostById($id:ID!){\r\n    getPostById(id:$id){\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": "{\"id\":\"1\"}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InEyMEpPN0FTTlhuczFMTUl6TEdkNyJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoiYm1zX21hbmFnZV91c2VyQGdtYWlsLmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LWs1Z25pM2Zja2FmZTZ5NnIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY0ZmMxM2Y0MmY2ZjJlOTQ4NjlmNDY4ZiIsImF1ZCI6WyJibXNfYXV0aDBfYXBpX2lkZW50aWZpZXIiLCJodHRwczovL2Rldi1rNWduaTNmY2thZmU2eTZyLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQzMzYyNDYsImV4cCI6MTY5NDQyMjY0NiwiYXpwIjoiM25PdzVIalRvWENmbWFqUVpNdzRJTFVOSUlwamVIMGYiLCJzY29wZSI6Im9wZW5pZCIsInBlcm1pc3Npb25zIjpbXX0.IrtLns7ZKYCkyaV9CIjzdY8bUZSKzOqb4dYz9S70sFBzid7qKNOFkDhMHlqXS7ZO6jyXOuEwwBhLdoxJdtnDln2Bp6KSPWIe63CXBo0G8lZnet8bu6oDgnmSEKRpovLc5xX5wmIugAYI3Z505SzrobK1Rs4_LWFNKzyJE7HK6qlXzqlal8m9S0UFKIfsjvzHdBEE1JbwdatBHaPSlO12_GO8DSGWNlK79fNJAnvUTio_NGxwAeX3xMC852oDpKQhaHBLaSSZlyoKTFTXNlAgGdiyfq9IB4VvL3Uvo13XFFeRjqheN5V6rlGOHGI35uixFPHsBB6wm6Ap-f4dcO4i2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation updatePost($id:ID!,$postInput:PostInput!){\r\n    updatePost(id:$id,postInput:$postInput)\r\n    {\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n\r\n}",
+						"variables": "{\r\n    \"id\":\"1\",\r\n    \"postInput\":{\r\n        \"title\":\"123456789\",\r\n        \"author\":\"1234567890\",\r\n        \"content\":\"12345678901\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InEyMEpPN0FTTlhuczFMTUl6TEdkNyJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoiYm1zX21hbmFnZV91c2VyQGdtYWlsLmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LWs1Z25pM2Zja2FmZTZ5NnIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY0ZmMxM2Y0MmY2ZjJlOTQ4NjlmNDY4ZiIsImF1ZCI6WyJibXNfYXV0aDBfYXBpX2lkZW50aWZpZXIiLCJodHRwczovL2Rldi1rNWduaTNmY2thZmU2eTZyLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQzMzYyNDYsImV4cCI6MTY5NDQyMjY0NiwiYXpwIjoiM25PdzVIalRvWENmbWFqUVpNdzRJTFVOSUlwamVIMGYiLCJzY29wZSI6Im9wZW5pZCIsInBlcm1pc3Npb25zIjpbXX0.IrtLns7ZKYCkyaV9CIjzdY8bUZSKzOqb4dYz9S70sFBzid7qKNOFkDhMHlqXS7ZO6jyXOuEwwBhLdoxJdtnDln2Bp6KSPWIe63CXBo0G8lZnet8bu6oDgnmSEKRpovLc5xX5wmIugAYI3Z505SzrobK1Rs4_LWFNKzyJE7HK6qlXzqlal8m9S0UFKIfsjvzHdBEE1JbwdatBHaPSlO12_GO8DSGWNlK79fNJAnvUTio_NGxwAeX3xMC852oDpKQhaHBLaSSZlyoKTFTXNlAgGdiyfq9IB4VvL3Uvo13XFFeRjqheN5V6rlGOHGI35uixFPHsBB6wm6Ap-f4dcO4i2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation deletePost($id:ID!){\r\n    deletePost(id:$id){\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": "{\"id\":\"1\"}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPosts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InEyMEpPN0FTTlhuczFMTUl6TEdkNyJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoiYm1zX21hbmFnZV91c2VyQGdtYWlsLmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LWs1Z25pM2Zja2FmZTZ5NnIudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY0ZmMxM2Y0MmY2ZjJlOTQ4NjlmNDY4ZiIsImF1ZCI6WyJibXNfYXV0aDBfYXBpX2lkZW50aWZpZXIiLCJodHRwczovL2Rldi1rNWduaTNmY2thZmU2eTZyLnVzLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQzMzc2NzYsImV4cCI6MTY5NDQyNDA3NiwiYXpwIjoiM25PdzVIalRvWENmbWFqUVpNdzRJTFVOSUlwamVIMGYiLCJzY29wZSI6Im9wZW5pZCIsInBlcm1pc3Npb25zIjpbXX0.QEYIKntYq8WdHAIVOHqdcsw94C4kMRHl8OOq24x0WtAuT9rNC0DTTJtS3RSC_iNmcAskLTvcqaFJPn59_ndXa9AQikBhdk0KRi0UdlrxwDc8DDXPVyng8E6jVwOWff7nK5ILfBX0PPwqxDCVh6jeXbDrgAT5f7tkGgZjPa1-_5GWU7kANSy9czIBxHNjeWCg4b5iAug9_LcTCaIWWxGoMG8OHHn26wMoWvnO6Vn1qgZ3rH5tyKt09KwjumQXOlWqL3kGAdwBH5s_JC0I0j44t2QYcpsp0nKN_IcvEgO4BSNsqwmcNTov4El3ALtrq9U8hN_bbEHgPX2hOvYAqwU25w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getPosts($pageNumber:Int,$pageSize:Int){\r\n        getPosts(pageNumber:$pageNumber,pageSize:$pageSize){\r\n                posts{\r\n                    id,\r\n                    title,\r\n                    author,\r\n                    content,\r\n                    createdAt,\r\n                    updatedAt\r\n                },\r\n                size,\r\n                totalElements,\r\n                totalPages,\r\n                number\r\n            }\r\n}",
+						"variables": "{\r\n    \"pageNumber\":3,\r\n    \"pageSize\":2\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

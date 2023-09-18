@@ -1,0 +1,2 @@
+create table if not exists Post(id bigint AUTO_INCREMENT primary key, title varchar(20) not null,content text,
+author varchar(10) not null,created_At TIMESTAMP WITH TIME ZONE not null,updated_At TIMESTAMP WITH TIME ZONE);

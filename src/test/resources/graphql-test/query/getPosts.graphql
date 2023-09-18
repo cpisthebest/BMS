@@ -1,0 +1,16 @@
+query getPosts($pageNumber:Int!,$pageSize:Int!){
+    getPosts(pageNumber:$pageNumber,pageSize:$pageSize){
+        posts{
+            id,
+            title,
+            author,
+            content,
+            createdAt,
+            updatedAt
+        },
+        size,
+        totalElements,
+        totalPages,
+        number
+    }
+}

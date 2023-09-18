@@ -1,0 +1,11 @@
+mutation addPost($postInput: PostInput!){
+    addPost(postInput:$postInput)
+    {
+        id,
+        title,
+        author,
+        content,
+        createdAt,
+        updatedAt
+    }
+}

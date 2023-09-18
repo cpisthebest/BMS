@@ -1,0 +1,10 @@
+query{
+    getAllPosts{
+        id,
+        title,
+        author,
+        content,
+        createdAt,
+        updatedAt
+    }
+}

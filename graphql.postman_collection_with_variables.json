@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "38300d4e-a3f0-4c53-a9d7-755a5fcc36c3",
+		"name": "graphql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPosts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n    getAllPosts{\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addPost($postInput: PostInput!){\r\n    addPost(postInput:$postInput)\r\n    {\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": "{\r\n    \"postInput\":{\r\n        \"title\":\"7\",\r\n        \"content\":\"1\",\r\n        \"author\":\"1234567890\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query getPostById($id:ID!){\r\n    getPostById(id:$id){\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": "{\"id\":\"922337203685477580\"}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation updatePost($id:ID!,$postInput:PostInput!){\r\n    updatePost(id:$id,postInput:$postInput)\r\n    {\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n\r\n}",
+						"variables": "{\r\n    \"id\":\"1\",\r\n    \"postInput\":{\r\n        \"title\":\"123456789\",\r\n        \"author\":\"1234567890\",\r\n        \"content\":\"12345678901\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation deletePost($id:ID!){\r\n    deletePost(id:$id){\r\n        id,\r\n        title,\r\n        author,\r\n        content,\r\n        createdAt,\r\n        updatedAt\r\n    }\r\n}",
+						"variables": "{\"id\":\"\"}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
